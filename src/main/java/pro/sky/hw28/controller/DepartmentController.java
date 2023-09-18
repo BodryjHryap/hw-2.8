@@ -38,5 +38,8 @@ public class DepartmentController {
         return departmentService.getAllEmployee(departmentId);
     }
 
-
+    @GetMapping("/allEmployees")
+    public Map<Integer, List<Employee>> getEmployees() {
+        return departmentService.getEmployee();
+    }
 }
